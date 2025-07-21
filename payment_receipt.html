@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Receipt</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #3399cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            color: #333;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .receipt-table th, .receipt-table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+        .footer {
+            background: #f4f4f4;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h2>Payment Receipt</h2>
+        </div>
+        <div class="content">
+            <p>Hi {{ name }},</p>
+            <p>Thank you for your payment! Below are your transaction details:</p>
+
+            <table class="receipt-table">
+                <tr>
+                    <th>Payment ID:</th>
+                    <td>{{ payment_id }}</td>
+                </tr>
+                <tr>
+                    <th>Course:</th>
+                    <td>{{ course }}</td>
+                </tr>
+                <tr>
+                    <th>Amount:</th>
+                    <td>₹{{ amount }}</td>
+                </tr>
+                <tr>
+                    <th>Status:</th>
+                    <td>{{ status }}</td>
+                </tr>
+            </table>
+
+            <p>If you have any questions, feel free to contact our support team at support@edutech.com.</p>
+            <p>Welcome aboard! Happy Learning!</p>
+        </div>
+        <div class="footer">
+            © 2025 EduTech Academy | This is an automated receipt, please do not reply.
+        </div>
+    </div>
+</body>
+</html>

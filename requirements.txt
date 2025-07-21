@@ -1,0 +1,4 @@
+flask
+razorpay
+psycopg2-binary
+flask_sqlalchemy
